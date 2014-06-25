@@ -1,0 +1,7 @@
+parameters:
+#    room_setup.example.class: teacher\roomSetupBundle\Example
+
+services:
+#    room_setup.example:
+#        class: %room_setup.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

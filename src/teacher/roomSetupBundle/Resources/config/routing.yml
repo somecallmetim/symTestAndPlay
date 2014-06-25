@@ -1,0 +1,3 @@
+room_setup_homepage:
+    pattern:  /
+    defaults: { _controller: roomSetupBundle:Default:index }

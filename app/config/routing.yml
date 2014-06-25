@@ -1,0 +1,4 @@
+room_setup:
+    resource: "@roomSetupBundle/Resources/config/routing.yml"
+    prefix:   /
+

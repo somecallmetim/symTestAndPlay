@@ -135,6 +135,15 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // room_setup_homepage
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'room_setup_homepage');
+            }
+
+            return array (  '_controller' => 'teacher\\roomSetupBundle\\Controller\\DefaultController::indexAction',  '_route' => 'room_setup_homepage',);
+        }
+
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }
